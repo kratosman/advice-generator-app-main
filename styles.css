@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+*,::after,::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green:hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue:hsl(217, 19%, 24%);
+    --dark-blue:hsl(218, 23%, 16%);
+    --font-size-quote:28px;
+    --family-manrope:'Manrope', sans-serif;
+    --font-weight-800:800;
+}
+body {
+    background-color: var(--dark-blue);
+}
+.container-fluid{
+    background-color: var(--dark-grayish-blue);
+    width: 539px;
+    height: 330px;
+    border-radius: 9px;
+    margin-inline: auto;
+    margin-top: 100px;
+    padding: 59px;
+    position: relative;
+}
+.box-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 38px;
+}
+.advice-number{
+    font-family: var(--family-manrope);
+    color: var(--neon-green);
+    font-size: 12px;
+    text-align: center;
+}
+.random-quote{
+    font-size: var(--font-size-quote);
+    font-family: var(--family-manrope);
+    color: var(--light-cyan);
+    text-align: center;
+    word-wrap: break-word;
+}
+.dice {
+    background-color: var(--neon-green);
+    width: 64px;
+    height: 64px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+    position: absolute;
+    bottom: 0;
+    transform: translate(285%,50%);
+}
+.dice:hover {
+    box-shadow: 0px 0px 25px var(--neon-green) ;
+}
+.mobile{
+    display: none;
+}
+@media(max-width:500px){
+    .container-fluid{
+        background-color: var(--dark-grayish-blue);
+        width: 343px;
+        height: 313px;
+        border-radius: 9px;
+        margin-inline: auto;
+        margin-top: 100px;
+        padding: 40px;
+    }
+    .box-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 28px;
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display:block;
+    }
+    .dice {
+        background-color: var(--neon-green);
+        width: 64px;
+        height: 64px;
+        border-radius: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 0.2s;
+        position: absolute;
+        bottom: 0;
+        transform: translate(155%,50%);
+    }
+ 
+}
